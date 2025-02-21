@@ -1,0 +1,132 @@
+/* Apply box-sizing globally and reset margins */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body styling for full-screen background and centered content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5); /* Shadow on the background */
+  overflow: hidden;
+}
+
+/* Light background overlay */
+.updatewrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  transition: backdrop-filter 0.5s ease-in-out;
+}
+
+/* Signup Container Styling (applicable to the Update form) */
+.update-container {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 1.5rem;  /* Reduced padding */
+  border-radius: 8px;
+  width: 450px;  /* Increased width */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow to form */
+  max-height: 600px;  /* Maximum height limit to avoid excessive height */
+  overflow-y: auto; /* Allow vertical scroll if content overflows */
+}
+
+/* Heading */
+h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* Input Fields */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 1px solid #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Button Styling */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .update-container {
+    width: 100%; /* Full width on small screens */
+    padding: 1rem;
+    max-width: 350px; /* Limit max width */
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+.update-form{
+  height: 450px;
+}
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}

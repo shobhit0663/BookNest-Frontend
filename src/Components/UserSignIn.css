@@ -1,0 +1,184 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    color: #333;
+  }
+  
+  /* Wrapper to center the form */
+  .signin-wrapper {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    
+  }
+  
+  /* Sign-In Container */
+  .signin-container {
+    background-color: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+    
+  }
+  
+  /* Title */
+  .signin-title {
+    font-size: 2.5rem; /* Slightly larger for emphasis */
+    color: #222; /* Darker shade for better readability */
+    font-weight: 700; /* Keeps the boldness strong */
+    margin-bottom: 15px; /* Increased spacing for better separation */
+    text-transform: uppercase; /* Makes it look more professional */
+    letter-spacing: 1px; 
+    text-align: center; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+  /* Description */
+.signin-description {
+  font-size: 1.1rem;
+  color: #444; /* Slightly darker for readability */
+  margin-bottom: 18px;
+  line-height: 1.6; /* Improves text readability */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Form */
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Reduces excessive spacing */
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Form Group */
+/* Form Group */
+.signin-form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 6px; /* Adds spacing between label and input */
+  margin-bottom: 12px; /* Adds spacing between form groups */
+}
+
+
+/* Label */
+.signin-label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: capitalize; /* Makes it more elegant */
+  letter-spacing: 0.5px;
+}
+
+/* Input */
+.signin-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.signin-input:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+}
+
+/* Submit Button */
+.signin-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.signin-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+}
+
+/* Footer (Register Link) */
+.signin-footer {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signin-link {
+  color: #007bff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.signin-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Container */
+.signin-container {
+  width: 400px;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Media Queries (for responsiveness) */
+@media (max-width: 768px) {
+  .signin-container {
+      width: 90%;
+      padding: 20px;
+  }
+
+  .signin-title {
+      font-size: 2rem;
+  }
+
+  .signin-description {
+      font-size: 1rem;
+  }
+
+  .signin-input {
+      font-size: 0.95rem;
+      padding: 10px;
+  }
+
+  .signin-button {
+      font-size: 1rem;
+      padding: 10px;
+  }
+}

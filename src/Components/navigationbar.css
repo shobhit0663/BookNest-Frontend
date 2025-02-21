@@ -1,0 +1,232 @@
+/* navigationbar.css */
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  border-bottom: 2px solid black;
+  box-shadow: 
+  0px 2px 4px rgba(0, 0, 0, 0.1), 
+  0px 4px 10px rgba(0, 0, 0, 0.15);
+border: 1px solid rgba(0, 0, 0, 0.12);
+
+  z-index: 1000; /* Ensure the navbar stays on top of other content */
+}
+
+/* Logo */
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  color: black; /* Default text color */
+  text-decoration: none; /* Remove default underline */
+  font-size: 1.6rem; /* Set a clear, bold font size */
+  font-weight: 600; /* Slightly lighter weight for a more refined look */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern and clean font */
+  letter-spacing: 1px; /* Slightly increased letter spacing for elegance */
+  transition: all 0.3s ease; /* Smooth transition for color, transformation, etc. */
+  position: relative; /* Necessary for positioning the pseudo-element */
+  text-transform: uppercase; /* Make the logo text uppercase for a bold impression */
+}
+
+.navbar-logo a:hover {
+  color: #007bff; /* Change text color to blue on hover */
+  transform: translateY(-3px); /* Subtle upward movement on hover */
+  text-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2); /* Add a light glowing effect */
+}
+
+/* Optional: Add underline effect on hover */
+.navbar-logo a:hover::after {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; 
+  background-color: #007bff; 
+  transform: scaleX(0); 
+  transition: transform 0.3s ease; 
+}
+
+/* On hover, expand the underline */
+.navbar-logo a:hover::after {
+  transform: scaleX(1); /* Expand the underline */
+}
+.navbar-logo .logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+/* Navbar Links */
+.navbar-links {
+  font-size: larger;
+  font-weight: bold;
+  list-style-type: none;
+  display:flex;
+  gap: 100px;
+}
+
+.navbar-links li {
+  font-size: 1.2rem;
+}
+
+
+
+.navbar-links a {
+  text-decoration: none; 
+  color: #333; 
+  padding: 10px 15px; 
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  transition: all 0.3s ease; 
+  position: relative; 
+}
+
+.navbar-links a:hover {
+  color: #ffffff; /* Change text color on hover */
+  background-color: black; /* Add background color on hover */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2); /* Add subtle shadow */
+  transform: translateY(-3px); /* Slightly lift the element */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Add a text shadow for depth */
+}
+
+
+.navbar-links a::after {
+  content: ''; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff; /* Underline color */
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%; /* Make the underline full width on hover */
+}
+
+/* Optional: Change the cursor to pointer */
+.navbar-links a:hover {
+  cursor: pointer;
+}
+
+
+/* Navbar Actions (Buttons) */
+.navbar-actions {
+  display: flex;
+  gap: 30px;
+}
+
+
+ /* Login Button */
+.btn-login {
+  padding: 12px 20px; /* Add padding for better click area */
+  background-color: #007bff; /* Initial background color */
+  color: white; /* Text color */
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Bold text */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: all 0.3s ease; /* Smooth transition for all effects */
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Subtle shadow */
+}
+
+/* Cart Button */
+.btn-cart {
+  padding: 12px 20px; /* Add padding for better click area */
+  background-color: #28a745; /* Initial background color */
+  color: white; /* Text color */
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Bold text */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: all 0.3s ease; /* Smooth transition for all effects */
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2); /* Subtle shadow */
+}
+
+/* Hover effect for Login Button */
+.btn-login:hover {
+  background-color: #0056b3; /* Darker blue background on hover */
+  transform: translateY(-3px); /* Slightly lift the button */
+  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3); /* More prominent shadow on hover */
+}
+
+/* Hover effect for Cart Button */
+.btn-cart:hover {
+  background-color: #218838; /* Darker green background on hover */
+  transform: translateY(-3px); /* Slightly lift the button */
+  box-shadow: 0 6px 12px rgba(33, 136, 56, 0.3); /* More prominent shadow on hover */
+}
+
+/* Optional: Add active state for buttons when clicked */
+.btn-login:active,
+.btn-cart:active {
+  transform: translateY(1px); /* Button sinks down when clicked */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Reset shadow */
+}
+
+
+
+
+/* Add padding to body to prevent navbar from overlapping content */
+body {
+  padding-top: 60px; /* Adjust according to navbar height */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-actions {
+    margin-top: 15px;
+    /* flex-direction: column; */
+    gap: 20px;
+  }
+}
+.btn-logout {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-logout:hover {
+  background-color: darkred;
+}
+

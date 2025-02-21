@@ -1,0 +1,156 @@
+/* Apply box-sizing globally and reset margins */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body styling for full-screen background and centered content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5); /* Shadow effect on the background */
+  overflow: hidden;
+}
+
+/* Light background overlay */
+.addwrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  transition: backdrop-filter 0.5s ease-in-out;
+}
+
+/* Add Container Styling */
+.addbook-container {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  padding: 2rem;  /* Adequate spacing */
+  border-radius: 12px;
+  width: 450px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); 
+  max-height: 600px;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hide the scrollbar */
+.addbook-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Heading */
+h1 {
+  color: #222;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* Input Fields */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus Effect */
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 1px solid #007bff;
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.4);
+  background-color: #fff;
+}
+
+/* Button Styling */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Hover Effect */
+.submit-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #004092);
+  transform: scale(1.03);
+  box-shadow: 0px 6px 15px rgba(0, 91, 187, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .addbook-container {
+    width: 100%;
+    padding: 1.5rem;
+    max-width: 350px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+/* Form Height */
+.addbook-form {
+  height: 480px;
+}
+
+/* Smooth Hover Effect for Form */
+.addbook-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+.form-label{
+  background-color: white;
+  color: black;
+}
